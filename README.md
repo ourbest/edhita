@@ -17,7 +17,6 @@ If you're curious about the Android counterpart, developed using Kotlin, check o
 ## Development
 
 ```
-$ cp Constants.swift Edhita/Models/
 $ open Edhita.xcodeproj
 ```
 
@@ -52,4 +51,3 @@ Year | Version | Technology | Branch
 ## Author
 
 [@tnantoka](https://twitter.com/tnantoka)
-
