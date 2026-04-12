@@ -7,3 +7,4 @@
 */
 
 "NSUserTrackingUsageDescription" = "It will be used to deliver personalized ads to you.";
+"CFBundleDisplayName" = "Code Editor";

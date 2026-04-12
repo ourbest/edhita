@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FinderListView: View {
     @Environment(\.editMode) private var editMode
+    @EnvironmentObject private var documentCoordinator: DocumentOpenCoordinator
 
     @ObservedObject var list: FinderList
 
@@ -223,7 +224,15 @@ struct FinderListView: View {
                 InfoView()
             }
         }
+        .sheet(item: $documentCoordinator.presentation) { presentation in
+            NavigationView {
+                EditorView(item: presentation.item)
+            }
+        }
         .onAppear {
+            list.refresh()
+        }
+        .onChange(of: documentCoordinator.rootRefreshToken) { _ in
             list.refresh()
         }
         .environment(\.editMode, .constant(isEditing ? .active : .inactive))
@@ -237,5 +246,6 @@ struct FinderListView_Previews: PreviewProvider {
         NavigationView {
             FinderListView(list: list)
         }
+        .environmentObject(DocumentOpenCoordinator.shared)
     }
 }

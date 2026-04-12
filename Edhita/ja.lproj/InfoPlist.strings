@@ -7,3 +7,4 @@
 */
 
 "NSUserTrackingUsageDescription" = "できるだけ関心のある広告を表示するために使用します";
+"CFBundleDisplayName" = "Code Editor";

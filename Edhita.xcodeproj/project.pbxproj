@@ -40,6 +40,8 @@
 		9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */; };
 		9BFDA6DC289BF6EB007EE921 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFDA6DE289BF6EB007EE921 /* Localizable.strings */; };
 		9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */; };
+		A12F3C982F13D5A40012359C /* DocumentHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3C972F13D5A40012359C /* DocumentHandling.swift */; };
+		A12F3C9A2F13D8BE0012359C /* DocumentNamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		9BFDA6DD289BF6EB007EE921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9BFDA6DF289BF6EC007EE921 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		A12F3C972F13D5A40012359C /* DocumentHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentHandling.swift; sourceTree = "<group>"; };
+		A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentNamingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				9B37693B288D8D47002392EB /* EdhitaTests.swift */,
+				A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */,
 			);
 			path = EdhitaTests;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				9BFDA6BC28991698007EE921 /* FontManager.swift */,
 				9BFDA6BE28995123007EE921 /* Settings.swift */,
 				9BFDA6D4289BEAAB007EE921 /* Constants.swift */,
+				A12F3C972F13D5A40012359C /* DocumentHandling.swift */,
 				9B8FD48E2B0A4976009950B9 /* AdManager.swift */,
 			);
 			path = Models;
@@ -382,13 +388,14 @@
 				9BFAF5D12890213D00AE31AC /* FinderItemView.swift in Sources */,
 				9BFDA6BD28991698007EE921 /* FontManager.swift in Sources */,
 				9BFDA6AB28915D46007EE921 /* PreviewWebView.swift in Sources */,
-				9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */,
-				9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */,
-				9BFDA6BB289914A4007EE921 /* FontSettingsView.swift in Sources */,
-				9B8FD48F2B0A4976009950B9 /* AdManager.swift in Sources */,
-				9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */,
-				9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */,
-			);
+					9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */,
+					9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */,
+					9BFDA6BB289914A4007EE921 /* FontSettingsView.swift in Sources */,
+					9B8FD48F2B0A4976009950B9 /* AdManager.swift in Sources */,
+					9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */,
+					9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */,
+					A12F3C982F13D5A40012359C /* DocumentHandling.swift in Sources */,
+				);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9B376933288D8D47002392EB /* Sources */ = {
@@ -396,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B37693C288D8D47002392EB /* EdhitaTests.swift in Sources */,
+				A12F3C9A2F13D8BE0012359C /* DocumentNamingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

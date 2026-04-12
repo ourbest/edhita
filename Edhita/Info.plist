@@ -2,10 +2,90 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDisplayName</key>
+	<string>Code Editor</string>
+	<key>CFBundleName</key>
+	<string>Code Editor</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Code Editor Document</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>com.bornneet.codeeditor.text</string>
+			</array>
+		</dict>
+	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-6374739630212171~7866879841</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.text</string>
+				<string>public.source-code</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>Code Editor Document</string>
+			<key>UTTypeIdentifier</key>
+			<string>com.bornneet.codeeditor.text</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>swift</string>
+					<string>m</string>
+					<string>mm</string>
+					<string>h</string>
+					<string>c</string>
+					<string>cc</string>
+					<string>cpp</string>
+					<string>hpp</string>
+					<string>js</string>
+					<string>ts</string>
+					<string>jsx</string>
+					<string>tsx</string>
+					<string>html</string>
+					<string>css</string>
+					<string>json</string>
+					<string>xml</string>
+					<string>md</string>
+					<string>txt</string>
+					<string>py</string>
+					<string>rb</string>
+					<string>go</string>
+					<string>rs</string>
+					<string>java</string>
+					<string>kt</string>
+					<string>kts</string>
+					<string>sh</string>
+					<string>yml</string>
+					<string>yaml</string>
+					<string>csv</string>
+					<string>plist</string>
+					<string>xcconfig</string>
+					<string>toml</string>
+					<string>ini</string>
+					<string>conf</string>
+					<string>dart</string>
+					<string>php</string>
+					<string>sql</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>

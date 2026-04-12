@@ -23,7 +23,9 @@ struct FinderItem: Identifiable, Hashable {
     }
 
     var _content: String? {
-        try? String(contentsOf: url)
+        try? DocumentURLAccess.perform(with: url) {
+            try String(contentsOf: url)
+        }
     }
 
     var isDirectory: Bool {
@@ -51,11 +53,15 @@ struct FinderItem: Identifiable, Hashable {
     }
 
     func update(content: String) {
-        try? content.write(to: url, atomically: true, encoding: .utf8)
+        try? DocumentURLAccess.perform(with: url) {
+            try content.write(to: url, atomically: true, encoding: .utf8)
+        }
     }
 
     func destroy() {
-        try? FileManager.default.removeItem(at: url)
+        try? DocumentURLAccess.perform(with: url) {
+            try FileManager.default.removeItem(at: url)
+        }
     }
 
     func duplicate() {
@@ -65,7 +71,9 @@ struct FinderItem: Identifiable, Hashable {
             duplicatedURL = self.duplicatedURL(suffix: " \(i)")
             i += 1
         }
-        try? FileManager.default.copyItem(at: url, to: duplicatedURL)
+        try? DocumentURLAccess.perform(with: url) {
+            try FileManager.default.copyItem(at: url, to: duplicatedURL)
+        }
     }
 
     private func duplicatedURL(suffix: String) -> URL {
@@ -74,12 +82,16 @@ struct FinderItem: Identifiable, Hashable {
     }
 
     func rename(name: String) {
-        try? FileManager.default.moveItem(
-            at: url, to: url.deletingLastPathComponent().appendingPathComponent(name))
+        try? DocumentURLAccess.perform(with: url) {
+            try FileManager.default.moveItem(
+                at: url, to: url.deletingLastPathComponent().appendingPathComponent(name))
+        }
     }
 
     func move(directory: URL) {
-        try? FileManager.default.moveItem(
-            at: url, to: directory.appendingPathComponent(filename))
+        try? DocumentURLAccess.perform(with: url) {
+            try FileManager.default.moveItem(
+                at: url, to: directory.appendingPathComponent(filename))
+        }
     }
 }

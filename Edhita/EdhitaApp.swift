@@ -8,23 +8,26 @@
 import SwiftUI
 
 @main
-struct EdhitaApp: App {
-    @Environment(\.scenePhase) private var scenePhase
+struct CodeEditorApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    private let documentCoordinator = DocumentOpenCoordinator.shared
 
     var body: some Scene {
         WindowGroup {
-            if UIDevice.current.userInterfaceIdiom == .phone {
-                NavigationView {
-                    FinderListView(list: FinderList(url: FinderList.rootURL))
-                }
-                .navigationViewStyle(.stack)
-            } else {
-                NavigationView {
-                    FinderListView(list: FinderList(url: FinderList.rootURL))
-                    PlaceholderView()
+            Group {
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    NavigationView {
+                        FinderListView(list: FinderList(url: FinderList.rootURL))
+                    }
+                    .navigationViewStyle(.stack)
+                } else {
+                    NavigationView {
+                        FinderListView(list: FinderList(url: FinderList.rootURL))
+                        PlaceholderView()
+                    }
                 }
             }
         }
+        .environmentObject(documentCoordinator)
     }
 }
