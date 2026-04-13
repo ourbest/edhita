@@ -7,6 +7,7 @@
 
 import Introspect
 import SwiftUI
+import UIKit
 
 struct EditorView: View {
     enum Mode: String, CaseIterable, Identifiable {
@@ -24,6 +25,9 @@ struct EditorView: View {
     @State private var reloader = false
     @State private var isPresentedActivity = false
     @State private var textView: UITextView?
+    private var syntaxLanguage: SyntaxHighlightingLanguage {
+        SyntaxHighlightingLanguage(filename: item.filename)
+    }
 
     var webView: PreviewWebView {
         PreviewWebView(url: item.url, reloader: reloader)
@@ -32,19 +36,25 @@ struct EditorView: View {
     var body: some View {
         HStack(spacing: 0.0) {
             if mode == .edit || mode == .split {
-                TextEditor(text: $content)
-                    .padding(.all, 8.0)
-                    .onChange(of: content) { content in
-                        item.update(content: content)
-                        reloader.toggle()
-                    }
-                    .background(Settings.shared.backgroundColor)
-                    .foregroundColor(Settings.shared.textColor)
-                    .font(.custom(Settings.shared.fontName, size: Settings.shared.fontSize))
-                    .disabled(!item.isEditable)
-                    .introspectTextView(customize: { textView in
+                SyntaxHighlightingTextView(
+                    text: $content,
+                    language: syntaxLanguage,
+                    font: UIFont(
+                        name: Settings.shared.fontName,
+                        size: Settings.shared.fontSize
+                    ) ?? .monospacedSystemFont(ofSize: Settings.shared.fontSize, weight: .regular),
+                    textColor: UIColor(Settings.shared.textColor),
+                    backgroundColor: .clear,
+                    isEditable: item.isEditable,
+                    onTextView: { textView in
                         self.textView = textView
-                    })
+                    }
+                )
+                .background(Settings.shared.backgroundColor)
+                .onChange(of: content) { content in
+                    item.update(content: content)
+                    reloader.toggle()
+                }
             }
             if mode == .split {
                 Color

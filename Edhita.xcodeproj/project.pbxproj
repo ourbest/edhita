@@ -14,8 +14,8 @@
 		9B376946288D8D47002392EB /* EdhitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B376945288D8D47002392EB /* EdhitaUITests.swift */; };
 		9B376948288D8D47002392EB /* EdhitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B376947288D8D47002392EB /* EdhitaUITestsLaunchTests.swift */; };
 		9B8142C02F13D2810012359C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9B8142BF2F13D2810012359C /* PrivacyInfo.xcprivacy */; };
-		9B8FD48F2B0A4976009950B9 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8FD48E2B0A4976009950B9 /* AdManager.swift */; };
-		9B8FD4922B0A4A56009950B9 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9B8FD4912B0A4A56009950B9 /* GoogleMobileAds */; };
+		9B8142C12F13F0000012359C /* SyntaxHighlightingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8142C02F13F0000012359C /* SyntaxHighlightingTests.swift */; };
+		A12F3CA02F13F2000012359C /* Highlighter in Frameworks */ = {isa = PBXBuildFile; productRef = A12F3CA12F13F2000012359C /* Highlighter */; };
 		9BFAF5CB288EDAB400AE31AC /* FinderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAF5CA288EDAB400AE31AC /* FinderList.swift */; };
 		9BFAF5CD288EDAC000AE31AC /* FinderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAF5CC288EDAC000AE31AC /* FinderItem.swift */; };
 		9BFAF5CF2890213200AE31AC /* FinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAF5CE2890213200AE31AC /* FinderListView.swift */; };
@@ -36,12 +36,12 @@
 		9BFDA6C6289AB1D1007EE921 /* AccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6C5289AB1D1007EE921 /* AccessoryView.swift */; };
 		9BFDA6CC289BC3EF007EE921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFDA6CE289BC3EF007EE921 /* InfoPlist.strings */; };
 		9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D2289BE9F8007EE921 /* AppDelegate.swift */; };
-		9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D4289BEAAB007EE921 /* Constants.swift */; };
-		9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */; };
-		9BFDA6DC289BF6EB007EE921 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFDA6DE289BF6EB007EE921 /* Localizable.strings */; };
-		9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */; };
-		A12F3C982F13D5A40012359C /* DocumentHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3C972F13D5A40012359C /* DocumentHandling.swift */; };
-		A12F3C9A2F13D8BE0012359C /* DocumentNamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */; };
+			9BFDA6DC289BF6EB007EE921 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFDA6DE289BF6EB007EE921 /* Localizable.strings */; };
+			9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */; };
+			A12F3C982F13D5A40012359C /* DocumentHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3C972F13D5A40012359C /* DocumentHandling.swift */; };
+			A12F3C9A2F13D8BE0012359C /* DocumentNamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */; };
+			A12F3C9B2F13F1000012359C /* SyntaxHighlighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3C9C2F13F1000012359C /* SyntaxHighlighting.swift */; };
+			A12F3C9D2F13F1000012359C /* SyntaxHighlightingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F3C9E2F13F1000012359C /* SyntaxHighlightingTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +71,8 @@
 		9B376941288D8D47002392EB /* EdhitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdhitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B376945288D8D47002392EB /* EdhitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdhitaUITests.swift; sourceTree = "<group>"; };
 		9B376947288D8D47002392EB /* EdhitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdhitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9B8142BF2F13D2810012359C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		9B8FD48E2B0A4976009950B9 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+			9B8142BF2F13D2810012359C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+			9B8142C02F13F0000012359C /* SyntaxHighlightingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightingTests.swift; sourceTree = "<group>"; };
 		9BFAF5CA288EDAB400AE31AC /* FinderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderList.swift; sourceTree = "<group>"; };
 		9BFAF5CC288EDAC000AE31AC /* FinderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderItem.swift; sourceTree = "<group>"; };
 		9BFAF5CE2890213200AE31AC /* FinderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderListView.swift; sourceTree = "<group>"; };
@@ -91,15 +91,15 @@
 		9BFDA6C5289AB1D1007EE921 /* AccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryView.swift; sourceTree = "<group>"; };
 		9BFDA6CF289BC3F1007EE921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9BFDA6D0289BC412007EE921 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9BFDA6D1289BE8C1007EE921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		9BFDA6D2289BE9F8007EE921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9BFDA6D4289BEAAB007EE921 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
-		9BFDA6DD289BF6EB007EE921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9BFDA6DF289BF6EC007EE921 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
-		A12F3C972F13D5A40012359C /* DocumentHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentHandling.swift; sourceTree = "<group>"; };
-		A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentNamingTests.swift; sourceTree = "<group>"; };
+			9BFDA6D1289BE8C1007EE921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+			9BFDA6D2289BE9F8007EE921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+			9BFDA6DD289BF6EB007EE921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+			9BFDA6DF289BF6EC007EE921 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+			9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+			A12F3C972F13D5A40012359C /* DocumentHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentHandling.swift; sourceTree = "<group>"; };
+			A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentNamingTests.swift; sourceTree = "<group>"; };
+			A12F3C9C2F13F1000012359C /* SyntaxHighlighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlighting.swift; sourceTree = "<group>"; };
+			A12F3C9E2F13F1000012359C /* SyntaxHighlightingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightingTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8FD4922B0A4A56009950B9 /* GoogleMobileAds in Frameworks */,
 				9BFDA6B128928604007EE921 /* Ink in Frameworks */,
 				9BFDA6C4289AB0B6007EE921 /* Introspect in Frameworks */,
+				A12F3CA02F13F2000012359C /* Highlighter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,14 +176,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9B37693A288D8D47002392EB /* EdhitaTests */ = {
-			isa = PBXGroup;
-			children = (
-				9B37693B288D8D47002392EB /* EdhitaTests.swift */,
-				A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */,
-			);
-			path = EdhitaTests;
-			sourceTree = "<group>";
+			9B37693A288D8D47002392EB /* EdhitaTests */ = {
+				isa = PBXGroup;
+				children = (
+					9B37693B288D8D47002392EB /* EdhitaTests.swift */,
+					A12F3C992F13D8BE0012359C /* DocumentNamingTests.swift */,
+					9B8142C02F13F0000012359C /* SyntaxHighlightingTests.swift */,
+				);
+				path = EdhitaTests;
+				sourceTree = "<group>";
 		};
 		9B376944288D8D47002392EB /* EdhitaUITests */ = {
 			isa = PBXGroup;
@@ -200,11 +201,10 @@
 				9BFAF5CA288EDAB400AE31AC /* FinderList.swift */,
 				9BFAF5CC288EDAC000AE31AC /* FinderItem.swift */,
 				9BFDA6BC28991698007EE921 /* FontManager.swift */,
-				9BFDA6BE28995123007EE921 /* Settings.swift */,
-				9BFDA6D4289BEAAB007EE921 /* Constants.swift */,
-				A12F3C972F13D5A40012359C /* DocumentHandling.swift */,
-				9B8FD48E2B0A4976009950B9 /* AdManager.swift */,
-			);
+					9BFDA6BE28995123007EE921 /* Settings.swift */,
+					A12F3C972F13D5A40012359C /* DocumentHandling.swift */,
+					A12F3C9C2F13F1000012359C /* SyntaxHighlighting.swift */,
+				);
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -213,16 +213,16 @@
 			children = (
 				9BFAF5CE2890213200AE31AC /* FinderListView.swift */,
 				9BFDA6B428966785007EE921 /* MoveListView.swift */,
-				9BFAF5D02890213D00AE31AC /* FinderItemView.swift */,
-				9BFDA6A828903413007EE921 /* EditorView.swift */,
-				9BFDA6AA28915D46007EE921 /* PreviewWebView.swift */,
+					9BFAF5D02890213D00AE31AC /* FinderItemView.swift */,
+					9BFDA6A828903413007EE921 /* EditorView.swift */,
+					A12F3C9E2F13F1000012359C /* SyntaxHighlightingTextView.swift */,
+					9BFDA6AA28915D46007EE921 /* PreviewWebView.swift */,
 				9BFDA6B22895FC95007EE921 /* PromptView.swift */,
 				9BFDA6B828981A76007EE921 /* SafariView.swift */,
 				9BFDA6B6289804BD007EE921 /* InfoView.swift */,
 				9BFDA6BA289914A4007EE921 /* FontSettingsView.swift */,
 				9BFDA6C0289A99C2007EE921 /* ActivityView.swift */,
 				9BFDA6C5289AB1D1007EE921 /* AccessoryView.swift */,
-				9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */,
 				9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */,
 			);
 			path = Views;
@@ -247,7 +247,7 @@
 			packageProductDependencies = (
 				9BFDA6B028928604007EE921 /* Ink */,
 				9BFDA6C3289AB0B6007EE921 /* Introspect */,
-				9B8FD4912B0A4A56009950B9 /* GoogleMobileAds */,
+				A12F3CA12F13F2000012359C /* Highlighter */,
 			);
 			productName = Edhita;
 			productReference = 9B376927288D8D46002392EB /* Edhita.app */;
@@ -325,7 +325,7 @@
 			packageReferences = (
 				9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */,
 				9BFDA6C2289AB0B6007EE921 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				9B8FD4902B0A4A56009950B9 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				A12F3CA32F13F2000012359C /* XCRemoteSwiftPackageReference "HighlighterSwift" */,
 			);
 			productRefGroup = 9B376928288D8D46002392EB /* Products */;
 			projectDirPath = "";
@@ -388,25 +388,25 @@
 				9BFAF5D12890213D00AE31AC /* FinderItemView.swift in Sources */,
 				9BFDA6BD28991698007EE921 /* FontManager.swift in Sources */,
 				9BFDA6AB28915D46007EE921 /* PreviewWebView.swift in Sources */,
-					9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */,
-					9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */,
-					9BFDA6BB289914A4007EE921 /* FontSettingsView.swift in Sources */,
-					9B8FD48F2B0A4976009950B9 /* AdManager.swift in Sources */,
-					9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */,
-					9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */,
+				9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */,
+				9BFDA6BB289914A4007EE921 /* FontSettingsView.swift in Sources */,
+				9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */,
 					A12F3C982F13D5A40012359C /* DocumentHandling.swift in Sources */,
+					A12F3C9B2F13F1000012359C /* SyntaxHighlighting.swift in Sources */,
+					A12F3C9D2F13F1000012359C /* SyntaxHighlightingTextView.swift in Sources */,
 				);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B376933288D8D47002392EB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B37693C288D8D47002392EB /* EdhitaTests.swift in Sources */,
-				A12F3C9A2F13D8BE0012359C /* DocumentNamingTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+			9B376933288D8D47002392EB /* Sources */ = {
+				isa = PBXSourcesBuildPhase;
+				buildActionMask = 2147483647;
+				files = (
+					9B37693C288D8D47002392EB /* EdhitaTests.swift in Sources */,
+					A12F3C9A2F13D8BE0012359C /* DocumentNamingTests.swift in Sources */,
+					9B8142C12F13F0000012359C /* SyntaxHighlightingTests.swift in Sources */,
+				);
+				runOnlyForDeploymentPostprocessing = 0;
+			};
 		9B37693D288D8D47002392EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -577,10 +577,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_ASSET_PATHS = "\"Edhita/Preview Content\"";
-				DEVELOPMENT_TEAM = H4Z42X3L6X;
+				DEVELOPMENT_TEAM = RMBY9EXYRL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Edhita/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Code Editor";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "It will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -591,7 +595,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bornneet.Edhita;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.best1.CodeEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -607,10 +611,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_ASSET_PATHS = "\"Edhita/Preview Content\"";
-				DEVELOPMENT_TEAM = H4Z42X3L6X;
+				DEVELOPMENT_TEAM = RMBY9EXYRL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Edhita/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Code Editor";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "It will be used to deliver personalized ads to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -621,7 +629,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bornneet.Edhita;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.best1.CodeEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -767,14 +775,17 @@
 				kind = branch;
 			};
 		};
+		A12F3CA32F13F2000012359C /* XCRemoteSwiftPackageReference "HighlighterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smittytone/HighlighterSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9B8FD4912B0A4A56009950B9 /* GoogleMobileAds */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9B8FD4902B0A4A56009950B9 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
-			productName = GoogleMobileAds;
-		};
 		9BFDA6B028928604007EE921 /* Ink */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */;
@@ -784,6 +795,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9BFDA6C2289AB0B6007EE921 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		A12F3CA12F13F2000012359C /* Highlighter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A12F3CA32F13F2000012359C /* XCRemoteSwiftPackageReference "HighlighterSwift" */;
+			productName = Highlighter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

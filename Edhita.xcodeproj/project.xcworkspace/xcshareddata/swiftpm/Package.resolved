@@ -1,6 +1,15 @@
 {
-  "originHash" : "5517dfaa1e5f3156468df2c3327903f51f28c0af040a01e57a286f2b0c2a3ce5",
+  "originHash" : "3bd9e37d997c1aef6d8d37eb77e1994ecc3fb25d05c12545f86665a84543d380",
   "pins" : [
+    {
+      "identity" : "highlighterswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/smittytone/HighlighterSwift.git",
+      "state" : {
+        "revision" : "81f2ab8f65eeec0b18e1a03f1dac369a159d0368",
+        "version" : "3.0.3"
+      }
+    },
     {
       "identity" : "ink",
       "kind" : "remoteSourceControl",
@@ -8,24 +17,6 @@
       "state" : {
         "branch" : "master",
         "revision" : "77c3d8953374a9cf5418ef0bd7108524999de85a"
-      }
-    },
-    {
-      "identity" : "swift-package-manager-google-mobile-ads",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-      "state" : {
-        "revision" : "1239c23464503053c17d37ee5daa70de3455e9c8",
-        "version" : "12.14.0"
-      }
-    },
-    {
-      "identity" : "swift-package-manager-google-user-messaging-platform",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
-      "state" : {
-        "revision" : "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
-        "version" : "3.1.0"
       }
     },
     {

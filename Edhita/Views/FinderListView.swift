@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct FinderListView: View {
     @Environment(\.editMode) private var editMode
@@ -19,6 +20,7 @@ struct FinderListView: View {
     @State private var isPresentedFilePrompt = false
     @State private var isPresentedDirectoryPrompt = false
     @State private var isPresentedDownloadPrompt = false
+    @State private var isPresentedImportPrompt = false
     @State private var isPresentedRenamePrompt = false
     @State private var isPresentedMoveList = false
     @State private var isPresentedInfo = false
@@ -35,17 +37,34 @@ struct FinderListView: View {
                             FinderItemView(item: item)
                         }
                         .isDetailLink(false)
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                withAnimation {
+                                    list.deleteItem(item: item)
+                                }
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                     } else {
                         NavigationLink(
                             destination: EditorView(item: item)
                         ) {
                             FinderItemView(item: item)
                         }
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                withAnimation {
+                                    list.deleteItem(item: item)
+                                }
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                     }
                 }
             }
             .listStyle(.plain)
-            AdBannerView()
         }
         .navigationTitle(list.url.lastPathComponent)
         .navigationBarTitleDisplayMode(.inline)
@@ -89,6 +108,9 @@ struct FinderListView: View {
                             }
                             Button("Download") {
                                 isPresentedDownloadPrompt.toggle()
+                            }
+                            Button("Open from iCloud") {
+                                isPresentedImportPrompt.toggle()
                             }
                         }
                     }
@@ -206,6 +228,14 @@ struct FinderListView: View {
                 )
             }
         }
+        .fileImporter(
+            isPresented: $isPresentedImportPrompt,
+            allowedContentTypes: [.item],
+            allowsMultipleSelection: false
+        ) { result in
+            guard let url = try? result.get().first else { return }
+            documentCoordinator.handleIncoming(url: url)
+        }
         .sheet(isPresented: $isPresentedMoveList) {
             if let selectedItem = selectedItem {
                 NavigationView {
@@ -234,6 +264,9 @@ struct FinderListView: View {
         }
         .onChange(of: documentCoordinator.rootRefreshToken) { _ in
             list.refresh()
+        }
+        .onOpenURL { url in
+            documentCoordinator.handleIncoming(url: url)
         }
         .environment(\.editMode, .constant(isEditing ? .active : .inactive))
     }

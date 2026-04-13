@@ -20,14 +20,21 @@ struct CodeEditorApp: App {
                         FinderListView(list: FinderList(url: FinderList.rootURL))
                     }
                     .navigationViewStyle(.stack)
+                    .environmentObject(documentCoordinator)
+                    .onOpenURL { url in
+                        documentCoordinator.handleIncoming(url: url)
+                    }
                 } else {
                     NavigationView {
                         FinderListView(list: FinderList(url: FinderList.rootURL))
                         PlaceholderView()
                     }
+                    .environmentObject(documentCoordinator)
+                    .onOpenURL { url in
+                        documentCoordinator.handleIncoming(url: url)
+                    }
                 }
             }
         }
-        .environmentObject(documentCoordinator)
     }
 }

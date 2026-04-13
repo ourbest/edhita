@@ -48,11 +48,23 @@ struct DocumentPresentation: Identifiable {
     let item: FinderItem
 }
 
+@MainActor
 final class DocumentOpenCoordinator: ObservableObject {
     static let shared = DocumentOpenCoordinator()
 
+    private let rootURL: URL
+    private let fileManager: FileManager
+
     @Published var presentation: DocumentPresentation?
     @Published var rootRefreshToken = UUID()
+
+    init(
+        rootURL: URL = FinderList.rootURL,
+        fileManager: FileManager = .default
+    ) {
+        self.rootURL = rootURL
+        self.fileManager = fileManager
+    }
 
     func handleIncoming(url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) {
         guard url.isFileURL else { return }
@@ -75,25 +87,24 @@ final class DocumentOpenCoordinator: ObservableObject {
     ) -> Bool {
         _ = options
 
-        let rootPath = FinderList.rootURL.standardizedFileURL.path
+        let rootPath = rootURL.standardizedFileURL.path
         let documentPath = url.standardizedFileURL.path
         if documentPath == rootPath || documentPath.hasPrefix(rootPath + "/") {
             return true
         }
 
-        let isUbiquitousItem = ((try? url.resourceValues(forKeys: [.isUbiquitousItemKey]))
-            ?.isUbiquitousItem) ?? false
-        return isUbiquitousItem
+        return false
     }
 
     private func importIntoDocuments(url: URL) -> URL? {
         let destination = DocumentNameResolver.uniqueURL(
-            for: FinderList.rootURL.appendingPathComponent(url.lastPathComponent)
+            for: rootURL.appendingPathComponent(url.lastPathComponent),
+            fileManager: fileManager
         )
 
         do {
             try DocumentURLAccess.perform(with: url) {
-                try FileManager.default.copyItem(at: url, to: destination)
+                try fileManager.copyItem(at: url, to: destination)
             }
             rootRefreshToken = UUID()
             return destination

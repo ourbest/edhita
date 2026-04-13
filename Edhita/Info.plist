@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleDisplayName</key>
-	<string>Code Editor</string>
-	<key>CFBundleName</key>
-	<string>Code Editor</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -21,12 +17,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-6374739630212171~7866879841</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
-	<key>LSSupportsOpeningDocumentsInPlace</key>
-	<true/>
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>UTExportedTypeDeclarations</key>
@@ -86,14 +76,5 @@
 			</dict>
 		</dict>
 	</array>
-	<key>SKAdNetworkItems</key>
-	<array>
-		<dict>
-			<key>SKAdNetworkIdentifier</key>
-			<string>cstr6suwn9.skadnetwork</string>
-		</dict>
-	</array>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>It will be used to deliver personalized ads to you.</string>
 </dict>
 </plist>
